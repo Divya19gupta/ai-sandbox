@@ -1,4 +1,4 @@
-# 1 AI Sentiment Analysis Web App
+## 1) AI Sentiment Analysis Web App
 
 A full-stack web application that performs **sentiment analysis** on user input using a pre-trained NLP model.
 
@@ -8,7 +8,7 @@ A full-stack web application that performs **sentiment analysis** on user input 
 
 ---
 
-## Features
+### Features
 
 * User can type any sentence and get **sentiment prediction** (Positive / Negative) with confidence.
 * Real-time API integration between React frontend and FastAPI backend.
@@ -16,7 +16,7 @@ A full-stack web application that performs **sentiment analysis** on user input 
 
 ---
 
-## Project Structure
+### Project Structure
 
 ```
 project-root/
@@ -37,9 +37,9 @@ project-root/
 
 ---
 
-## Setup Instructions
+### Setup Instructions
 
-### 1. Backend Setup
+#### 1. Backend Setup
 
 1. Navigate to backend folder:
 
@@ -64,7 +64,7 @@ uvicorn app:app --reload
 
 ---
 
-### 2. Frontend Setup
+#### 2. Frontend Setup
 
 1. Navigate to frontend folder:
 
@@ -88,7 +88,7 @@ npm start
 
 ---
 
-### 3. Connect & Test
+#### 3. Connect & Test
 
 1. Open [http://localhost:3000](http://localhost:3000) in your browser
 2. Type a sentence in the input field
@@ -98,7 +98,7 @@ npm start
 
 ---
 
-## Tech Stack
+### Tech Stack
 
 | Layer    | Technology                          |
 | -------- | ----------------------------------- |
@@ -108,7 +108,7 @@ npm start
 
 ---
 
-## Future Enhancements
+### Future Enhancements
 
 * Replace default model with **Roberta or zero-shot classification** for better accuracy
 * Add **history of analyzed sentences**
