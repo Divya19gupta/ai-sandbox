@@ -1,0 +1,122 @@
+🚀 FastAPI Mini Tutorial
+🔹 1. What is FastAPI?
+
+FastAPI is a Python framework for building APIs (like Express.js in Node).
+It’s:
+
+Fast 🚀 (built on asyncio)
+
+Easy 🧩 (just Python functions + decorators)
+
+Auto-docs 📖 (Swagger UI is built-in)
+
+🔹 2. Installation
+pip install fastapi uvicorn
+
+🔹 3. Your First FastAPI App
+
+Create a file main.py:
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def home():
+    return {"message": "Hello, FastAPI!"}
+
+
+Run it:
+
+uvicorn main:app --reload
+
+
+➡️ Open http://127.0.0.1:8000
+
+➡️ API docs at http://127.0.0.1:8000/docs
+ (interactive Swagger UI)
+
+🔹 4. API Endpoints
+
+GET request (no input):
+
+@app.get("/greet")
+def greet():
+    return {"msg": "Hello!"}
+
+
+GET request (with query parameter):
+
+@app.get("/greet/{name}")
+def greet_user(name: str):
+    return {"msg": f"Hello {name}!"}
+
+
+➡️ Try: http://127.0.0.1:8000/greet/John
+
+POST request (with body):
+
+from pydantic import BaseModel
+
+class User(BaseModel):
+    name: str
+    age: int
+
+@app.post("/user")
+def create_user(user: User):
+    return {"message": f"User {user.name} is {user.age} years old"}
+
+
+➡️ Use Swagger UI or Postman to send:
+
+{
+  "name": "Alice",
+  "age": 25
+}
+
+
+PyTorch vs TensorFlow: The AI Engines
+
+Think of PyTorch and TensorFlow as the engines that run AI models.
+
+When you use a pre-trained model like distilbert in Hugging Face:
+
+from transformers import pipeline
+model = pipeline("sentiment-analysis")
+
+
+…under the hood, it needs something to actually do the calculations (multiply matrices, apply neural network layers, etc.). That’s where PyTorch or TensorFlow come in.
+
+1. PyTorch (pt)
+
+Developed by Facebook.
+
+Very Pythonic → feels like writing regular Python code.
+
+Easy to debug and understand.
+
+Popular in research & prototyping.
+
+Example: Using PyTorch, the model does the computation without TensorFlow:
+
+model = pipeline("sentiment-analysis", framework="pt")
+
+2. TensorFlow (tf)
+
+Developed by Google.
+
+Used a lot in production and mobile deployment.
+
+More rigid, but very scalable.
+
+Sometimes integrates with Keras, a higher-level library for easier model building.
+
+✅ Key Takeaways
+
+Both do the same job: they run AI models.
+
+For most Hugging Face models, you can pick either.
+
+PyTorch is usually easier to start with if you’re a Python developer.
+
+TensorFlow/Keras is useful for deploying large-scale AI in production or on mobile.
