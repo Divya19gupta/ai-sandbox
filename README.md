@@ -112,4 +112,4 @@ npm start
 
 * Replace default model with **Roberta or zero-shot classification** for better accuracy
 * Add **history of analyzed sentences**
-* Deploy frontend + backend using \*\*Do
+
