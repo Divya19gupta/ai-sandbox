@@ -1,0 +1,12 @@
+To start with any project, follow: [IBHWSS]
+1) I = Idea, describe your project in 6-7 lines
+2) B = Build, what are we building
+3) H = How, how will your application work. 
+4) W = What concept will you use to follow these the above mentioned features
+5) S = Steps of pseudo code
+6) S = Stretching, what three features you want to add in the above project to make it next level.
+
+
+APPS:
+# Fake News Generator App:
+------------------------------------
