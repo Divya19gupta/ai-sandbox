@@ -14,4 +14,5 @@ print(df)
 
 #Encoding errors: You are using pandas to handle data that may have encoding issues and to resolve it use utf-8 or latin1
 #Series: A one-dimensional array-like object in pandas that can hold any data type.
+#gcsfs: A library that allows pandas to read and write data directly from Google Cloud Storage.
 '''
