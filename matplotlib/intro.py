@@ -191,7 +191,72 @@ plt.show() #Displays the plot
 
 # HEATMAPS: They are grid like strcutural representation.
 # Here, we want to understand the quantitative analysis between input and output data
+# Scatter plot won't give you information about the quantity, it will just show how much of x matches with y, does not tell about how strong the relationship is.
 
+# MATPLOTLIB HEATMAP:
+# Example data
+data = np.array([
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+])
+
+# Basic heatmap
+plt.imshow(data, cmap='viridis', interpolation='nearest')
+
+# Add colorbar and labels
+plt.colorbar()
+plt.title("Matplotlib Heatmap Example")
+plt.xlabel("X-axis label")
+plt.ylabel("Y-axis label")
+plt.show()
+
+# INFORMATION
+# plt.imshow() → displays a 2D array as an image (each number = color).
+# data → must be a NumPy array (not a DataFrame).
+# cmap='viridis' → sets the color scheme.
+# interpolation='nearest' → keeps sharp grid edges instead of smoothing.
+# plt.colorbar() → adds the scale legend on the side.
+# plt.xlabel() / plt.ylabel() → label the axes.
+
+# SEABORN HEATMAPS:
+data = pd.DataFrame({
+    'A': [1, 3, 5],
+    'B': [2, 4, 6],
+    'C': [3, 5, 7]
+})
+
+# Basic heatmap
+sns.heatmap(data)
+
+# Optional customization
+sns.heatmap(
+    data,
+    annot=True,         # write the values inside each cell
+    cmap='coolwarm',    # color theme ('coolwarm', 'viridis', 'magma', etc.)
+    linewidths=0.5,     # thin lines between the cells
+    cbar=True           # display the color scale on the right
+)
+
+plt.title("Seaborn Heatmap Example")
+plt.show()
+
+# INFORMATION:
+# sns.heatmap() → makes a grid where cell color = numeric value.
+# data → any 2D data (DataFrame or array).
+# annot=True → shows the actual numbers in each cell
+# cmap='coolwarm' → defines color gradient (cool = low, warm = high).
+# linewidths=0.5 → separates cells visually.
+# cbar=True → adds a colorbar to explain the color scale.
+# plt.title() and plt.show() → title and display.
+
+
+# PAIR PLOT: If you want to test all the relationships between all the features wrt to scatter plot, and to understand their correlation with each other
+# PAIR PLOT EXAMPLE:
+
+sns.pairplot(data)
+plt.show()
+# If it is same column then we can see a histogram
 
 
 ## [Categorical + Categorical Plots: Clustered Bar Plot, Stacked Bar Plot, Dodged Bar Plot]
@@ -265,3 +330,10 @@ plt.show()
 # Seaborn → Dodged
 
 # You can use boxplot to know about the outliers and the comparisons btw categories
+
+# PROJECTS:
+# Title
+# What did you do?
+# Impact of your project?
+# Hidden patterns
+# Business Understanding
