@@ -21,6 +21,21 @@ It is need because:
     - How will you visualise/understand such a big data?
     - Model becomes slower on such a large dataset
 
-We use standard scaling here to reduce the data in similar range because
+# We use standard scaling here to reduce the data in similar range (called z-scores) because to avoid biases on large data
+# FORMULA: z-scores = (x - mean)/ std deviation, where x = original value
+You get z-scores per column, and also 
+    - 0 means avg value
+    - -ve means below avg
+    - +ve means above avg
+    - Center of PCA (0,0)
+the scaling (z-scoring) is done per column (feature), not per value or across all values combined.
+
+# We also use Decomposition breaks high dimesional data into small parts
+# Further fit_transform() method is used, where they need to learn the mean/std deviation of the data given and transform means to apply that logic to scale the data
+
+EXAMPLE:
+So there's a data of a candidate with 4 features like resume, projects, extra curricular and education
+now what PCA will do is compress the above 4 features into two let's say like career readiness (holding 95% of the data) and soft skills (holding like 0.5% of the data)
+Now the final HR will look only final two features instead of going through such a big dataset of 4 features mentioned initially
 
 '''
