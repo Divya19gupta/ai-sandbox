@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css'
 import CoverLetterPage from './pages/CoverLetterPage';
 import UploadPage from './pages/UploadPage';
 
